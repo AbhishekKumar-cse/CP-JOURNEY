@@ -2,13 +2,23 @@
 using namespace std;
 
 void print(int n){
-    for(int i=n; i>=1; i--){
-        for(int j=n; j>=i; j--){
+    for(int i=1; i<=n; i++){
+        for(int j=0; j<n-i+1; j++){
+            cout<<"*";
+        }
+        cout<< endl;
+    }
+}
+
+void print1(int n){
+    for(int i=1; i<=n; i++){
+        for(int j=0; j<n-i+1; j++){
             cout<< j <<" ";
         }
         cout<< endl;
     }
 }
+
 
 int main(){
 
@@ -17,6 +27,6 @@ int main(){
     for(int i=0; i<t; i++){
         int n;
         cin >> n;
-        print(n);
+        print1(n);
     }
 }
